@@ -22,4 +22,5 @@ jobs:
           cache: "npm"
       - run: npm install
       - run: npm run build --if-present
-      - run: sudo mv -f build /var/www
+      - run: sudo rm -rf /var/www/build || true
+      - run: sudo mv build /var/www
